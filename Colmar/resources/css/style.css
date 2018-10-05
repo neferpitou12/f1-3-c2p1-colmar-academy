@@ -1,0 +1,458 @@
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2, h3 {
+  font-family: "Bree Serif", sans-serif;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 20px;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0 1.5rem;
+  align-items: center;
+  border-bottom: rgb(255, 136, 52) 2px solid;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  color: black;
+  font-weight: bold;
+}
+
+.logo h1 {
+  color: grey;
+}
+
+nav a {
+  margin-right: 1rem;
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  header .logo, header nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+
+  }
+
+/*jumbotron*/
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-color: rgba(25, 196, 255, 0.5);
+}
+
+.jumbotron img {
+  max-width: 60%;
+  height: auto;
+  margin: 2rem 1.5rem;
+}
+
+.jumbo-text {
+  max-width: 30%;
+  padding-bottom: 2rem;
+}
+
+.jumbo-text h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.jumbo-text p {
+  margin: 1.5rem 0;
+}
+
+.button {
+  background-color: rgba(255, 156, 52, 1);
+  color: white;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.button:hover {
+  transition: background-color 0.2s ease-in 0.1s;
+  background-color: rgb(0, 133, 178);
+}
+
+.button a {
+  color: white;
+}
+
+@media only screen and (max-width: 723px) {
+  .jumbotron {
+    flex-direction: column;
+  }
+
+  .jumbotron img {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .jumbo-text {
+    max-width: 90%;
+  }
+}
+
+/*information*/
+.information {
+  display: flex;
+}
+
+.big {
+  padding: 2rem 1.5rem;
+  width: 60%
+}
+
+.big img {
+width: 100%;
+}
+
+.big h2 {
+  margin: 2rem 0 1.5rem 0;
+  font-size: 2.5rem;
+}
+
+.big h5 {
+  margin-top: 2rem;
+  color: gray;
+}
+
+.small {
+  width: 40%;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.box a:hover {
+  transition: font-weight 2s ease-out;
+  font-weight: bolder;
+}
+
+.small .box:nth-child(1n+2) {
+  border-top: rgba(178, 91, 0, 0.2) 1.5px solid;
+}
+
+.box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.box img {
+  height: auto;
+  width: 35%;
+  padding: 1rem 1rem;
+}
+
+.text {
+  text-align: left;
+}
+
+.text a {
+  color: rgb(178, 91, 0);
+}
+
+.text p {
+  margin-bottom: 2rem;
+}
+
+.guest {
+  margin-bottom: 1.5rem;
+}
+
+.mobpic {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .big {
+    display: none;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .box .pcpic {
+    display: none;
+  }
+
+  .box .mobpic {
+    width: 90%;
+  }
+
+  .information {
+    align-items: center;
+  }
+
+  .mobpic {
+    display: inline-block;
+  }
+
+  .small {
+    width: 100%;
+  }
+
+  .text {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 810px) and (min-width: 480px) {
+  .information {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .big, .small {
+    width: 100%;
+    padding: 0;
+  }
+
+  .small {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .small .box {
+    flex-direction: column;
+    align-items: center;
+    max-width: 30%;
+    border: 0;
+  }
+
+  .box img {
+    width: 100%;
+  }
+
+  .small .box:nth-child(1n+1) {
+    border-top: rgba(178, 91, 0, 0.2) 1.5px solid;
+  }
+}
+
+/*learning content*/
+.learning {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(159, 166, 189, 0.2);
+}
+
+.learning h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.course-text {
+  margin: 0 0 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-text h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+  color: gray;
+}
+
+.course {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0 1rem 1rem 1rem;
+  max-width: 480px;
+  background-color: white;
+  border-left: rgba(255, 156, 52, 1) 2px solid;
+  flex-shrink: 1;
+}
+
+.course img {
+  height: auto;
+}
+
+.mobcourse {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .course-list {
+    display: none;
+  }
+
+  .learning {
+    background-color: white;
+  }
+
+  .mobcourse {
+    display: block;
+    margin: 0 1rem;
+  }
+
+  .mobcourse h3 {
+    background-color: rgba(159, 166, 189, 0.2);
+    padding: 1.5rem 0 1.5rem 1rem;
+    border-radius: 5px;
+  }
+
+}
+
+  @media only screen and (max-width: 1150px) and (min-width: 620px) {
+    .learning {
+      width: 100%;
+    }
+
+    .course-list {
+      width: 100%;
+      display: flex;
+    }
+
+    .course {
+      max-width: 40%;
+    }
+
+    .course img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 620px) {
+    .course {
+      width: 100%;
+    }
+  }
+
+
+/*thesis content*/
+.urban {
+  width: 60%;
+}
+
+.big video {
+  width: 100%;
+}
+
+.urban h3 {
+
+}
+
+.exhibit {
+  display: flex;
+}
+
+.thesis {
+  margin-bottom: 2rem;
+}
+
+.thesis h2 {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .thesis .big {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .urban .vidtext {
+    display: none;
+  }
+
+  .thesis .small {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 810px) and (min-width: 480px) {
+  .exhibit {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .urban video {
+    width: 100%;
+  }
+
+  .urban {
+    width: 100%;
+  }
+
+  .exhibit .small .box {
+    max-width: 45%;
+  }
+}
+
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 0 1.5rem;
+  height: 3rem;
+  font-size: 0.75rem;
+  border-top: rgb(255, 136, 52) 1px solid;
+  background-color: rgba(159, 166, 189, 0.2);
+}
+
+footer a {
+  margin-right: 1rem;
+}
+
+footer a:hover {
+  transition: color 1s ease-out;
+  color: rgb(255, 136, 52);
+}
+
+@media only screen and (max-width: 480px) {
+  .rest {
+    display: none;
+  }
+}
